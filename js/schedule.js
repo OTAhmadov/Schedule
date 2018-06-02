@@ -4,7 +4,7 @@ var GlobalmeetingEndDate ;
 var curEv=[];
 var submitedEvents = [];
 var Schedule = {
-    token: 'ab3aba49e47d48c3b4783f2a609eb51222645ed1767a4599bc961d58d6098a7e',
+    // token: 'fa5df1dab9734b52b88f986e5dfad327010d2868c20e4954a6aaa782bdf908d9',
     lang: 'az',
     appId: 1000009,
     currModule: '',
@@ -437,22 +437,22 @@ var Schedule = {
                             case Schedule.statusCodes.OK:
                                 try {
                                     if (data.data) {
-//                                        var user = data.data;
-//                                        $('.profile-data li[data-type="name"]').text(user.person.name + ' ' + user.person.surname + ' ' + user.person.patronymic);
-//                                        $('.profile-data li[data-type="role"]').text(user.role.value[Schedule.lang]);
-//                                        $('.profile-data li[data-type="org"]').text(user.structure.name[Schedule.lang]);
-//                                        $('.logo-name').text(user.orgName.value[Schedule.lang]);
-//                                        $('.main-img').attr('src', Schedule.urls.AdminRest + 'users/' + user.id + '/image?token=' + Schedule.token);
-//                                        $('.org-logo').attr('src', Schedule.urls.HSIS + 'structures/' + user.orgName.id + '/logo?token=' + Schedule.token);
-//                                        var img = $('.main-img');
-//                                        img.on('error', function (e) {
-//                                            $('.main-img').attr('src', 'assets/img/guest.png');
-//                                        })
-//                                        $('div.big-img img').attr('src', Schedule.urls.AdminRest + 'users/' + user.id + '/image?token=' + Schedule.token);
-//                                        $('div.big-img img').on('error', function (e) {
-//                                            $('div.big-img img').attr('src', 'assets/img/guest.png');
-//                                        });
-//                                        Schedule.structureId = user.structure.id;
+                                       var user = data.data;
+                                       $('.user-notify-content h6[data-type="name"]').text(user.person.name + ' ' + user.person.surname + ' ' + user.person.patronymic);
+                                       $('.user-notify-content p[data-type="role"]').text(user.role.value[Schedule.lang]);
+                                       $('.user-notify-content p[data-type="org"]').text(user.structure.name[Schedule.lang]);
+                                       $('.logo-name').text(user.orgName.value[Schedule.lang]);
+                                       $('.main-img').attr('src', Schedule.urls.AdminRest + 'users/' + user.id + '/image?token=' + Schedule.token);
+                                       $('.org-logo').attr('src', Schedule.urls.HSIS + 'structures/' + user.orgName.id + '/logo?token=' + Schedule.token);
+                                       var img = $('.main-img');
+                                       img.on('error', function (e) {
+                                           $('.main-img').attr('src', 'assets/img/guest.png');
+                                       })
+                                       $('div.big-img img').attr('src', Schedule.urls.AdminRest + 'users/' + user.id + '/image?token=' + Schedule.token);
+                                       $('div.big-img img').on('error', function (e) {
+                                           $('div.big-img img').attr('src', 'assets/img/guest.png');
+                                       });
+                                       Schedule.structureId = user.structure.id;
                                     }
                                 }
                                 catch (err) {

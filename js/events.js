@@ -630,4 +630,9 @@ $(function () {
             });
         }
     });
-});
+
+    $(".schedule-user").on("click", function () {
+        $('.user-info').toggleClass("helloWorld");
+        return false;
+    });
+

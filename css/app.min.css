@@ -1845,8 +1845,8 @@ pre code {
 .container-fluid {
     margin-right: auto;
     margin-left: auto;
-    padding-left: 15px;
-    padding-right: 15px
+    padding-left: 10px;
+    padding-right: 10px
 }
 
 .row {
@@ -4398,7 +4398,7 @@ textarea.input-group-sm > .form-control, textarea.input-group-sm > .input-group-
 
 .nav > li > a:hover, .nav > li > a:focus {
     text-decoration: none;
-    background-color: #eee
+    background-color: transparent;
 }
 
 .nav > li.disabled > a {
@@ -13914,7 +13914,7 @@ input:active, input:focus {
 }
 
 .tab-content {
-    padding: 20px 0
+    /*padding: 20px 0*/
 }
 
 .card {
@@ -15780,11 +15780,11 @@ input:active, input:focus {
 }
 
 .btn:not(.btn-link):not(.btn-float):not(.command-edit):not(.command-delete):not(.selectpicker) {
-    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .16), 0 2px 10px 0 rgba(0, 0, 0, .12)
+    /*box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .16), 0 2px 10px 0 rgba(0, 0, 0, .12)*/
 }
 
 .btn:not(.btn-link):not(.btn-float):not(.command-edit):not(.command-delete):not(.selectpicker):hover {
-    box-shadow: 0 5px 11px 0 rgba(0, 0, 0, .18), 0 4px 15px 0 rgba(0, 0, 0, .15)
+    /*box-shadow: 0 5px 11px 0 rgba(0, 0, 0, .18), 0 4px 15px 0 rgba(0, 0, 0, .15)*/
 }
 
 .btn .caret {
@@ -19274,7 +19274,7 @@ div.fc-row {
 
 @media (min-width: 1200px){
     body #content {
-        padding: 15px 0;
+        padding: 0 0;
     }
     body.sw-toggled #content {
         /*width: calc(100% - 150px);*/
@@ -19440,7 +19440,7 @@ body{
     z-index: -1;
 }
 #fc-actions{
-    z-index: 11;
+    z-index: 8;
 }
 body.sw-toggled .overlay{
     margin-left: 250px;
@@ -19621,4 +19621,179 @@ a.user{
 }
 .app-list{
     display: block;
+}
+
+
+.user-notify-content{
+    margin-top: 30px;
+    margin-left: 115px;
+}
+.user-notify-content h6{
+    margin: 0;
+    font-size: 20px;
+    color: #338bf8;
+}
+.new-notif-setting{
+    margin-bottom: 0 !important;
+}
+#logoutForm{
+    position: absolute;
+    top: 34px;
+    right: 10px;
+    opacity: 1;
+}
+
+.btn-power{
+    background: url("../img/power.png");
+    height: 20px;
+    width: 20px;
+    background-size: cover;
+    color: transparent;
+}
+.btn-power{
+    background-color: transparent !important;
+}
+.btn-power:hover,
+.btn-power:active
+{
+    background-color: transparent !important;
+    color: transparent !important;
+    box-shadow: none !important;
+}
+.nav-item {
+    width: 200px;
+}
+.user-notify-content {
+    margin-top: 30px;
+    margin-left: 115px;
+}
+.user-notify-content h6 {
+    margin: 0;
+    font-size: 20px;
+    color: #338bf8;
+}
+.user-notify-content p {
+    margin: 0;
+}
+.content-upper-header .user-info .big-img {
+    width: 80px;
+    height: 80px;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 1px solid grey;
+    position: absolute;
+    top: 30px;
+    left: 20px;
+}
+.content-upper-header .no-border-radius img {
+    height: 87px;
+    width: 87px;
+}
+.ems-tab{
+    width: 200px;
+    text-decoration: none;
+    background-color: #acacac;
+    color: #fff !important;
+    margin: 0 !important;
+}
+.ems-tab a{
+    padding: 15px 30px !important;
+    font-size: 15px;
+    font-weight: 300;
+    text-transform: uppercase;
+    text-align: center;
+    border-radius: 0 !important;
+    color: #fff !important;
+}
+li.ems-tab.active>a,li.ems-tab.active>a:hover, li.ems-tab.active>a:focus{
+    background-color: #338bf8;
+    border-color: transparent ;
+}
+.content-upper-header .user-info .big-img{
+    width: 80px;
+    height: 80px;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 1px solid grey;
+    position: absolute;
+    top: 30px;
+    left: 20px;
+}
+.content-upper-header .no-border-radius img{
+    height: 87px;
+    width: 87px;
+}
+.user-notify-content{
+    margin-top: 30px;
+    margin-left: 115px;
+}
+.btn-power{
+    background: url("../img/power.png");
+    height: 24px;
+    width: 20px;
+    background-size: cover;
+    color: transparent;
+}
+#logoutForm {
+    position: absolute;
+    top: 25px;
+    right: 10px;
+    opacity: 1;
+    display: inline-block;
+}
+.btn-power:hover, .btn-power:active{
+    background-color: transparent !important;
+    color: transparent !important;
+    box-shadow: none !important;
+}
+.user-notify-content h6{
+    margin: 0;
+    font-size: 20px;
+    color: #338bf8;
+}
+.user-notify-content p{
+    margin: 0;
+}
+.nav-pills{
+    margin-top: 30px;
+}
+.setting {
+    width: 400px;
+    height: 400px;
+}
+.buzz {
+    background-color: #f5f5f5;
+    height: 100vh;
+    padding-top: 80px;
+}
+
+.user-info{
+    width: 400px;
+    position: absolute;
+    right: -500px;
+    height: 100vh;
+    top: 55px;
+    z-index: 999 !important;
+    background-color: white;
+    transition: ease-in-out 500ms;
+    visibility: hidden;
+    opacity: 0;
+    border-radius: 2px;
+    background-color: #fff;
+    box-shadow: 0px 3px 3px #cdcdcd;
+}
+.helloWorld{
+    right: 0 !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+.user-info .big-img {
+    width: 80px;
+    height: 80px;
+    overflow: hidden;
+    /*border-radius: 50%;*/
+    border: 1px solid grey;
+    position: absolute;
+    top: 30px;
+    left: 20px;
 }
