@@ -450,7 +450,7 @@ var Schedule = {
                                        })
                                        $('div.big-img img').attr('src', Schedule.urls.AdminRest + 'users/' + user.id + '/image?token=' + Schedule.token);
                                        $('div.big-img img').on('error', function (e) {
-                                           $('div.big-img img').attr('src', 'assets/img/guest.png');
+                                           $('div.big-img img').attr('src', 'img/guest.png');
                                        });
                                        Schedule.structureId = user.structure.id;
                                     }

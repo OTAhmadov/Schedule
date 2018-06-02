@@ -19797,3 +19797,7 @@ li.ems-tab.active>a,li.ems-tab.active>a:hover, li.ems-tab.active>a:focus{
     top: 30px;
     left: 20px;
 }
+.no-border-radius{
+    height: 80px;
+    width: 80px;
+}
