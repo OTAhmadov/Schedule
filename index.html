@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+    <!--[if IE 9 ]><html class="ie9"><![endif]-->
+    
+<!-- Mirrored from byrushan.com/projects/ma/v1-1/calendar.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 30 Mar 2015 08:29:27 GMT -->
+<head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!--<link rel="shortcut icon" type="image/png" href="img/unibook-favicon.ico"/>-->
+        <title>Unibook</title>
+    
+        <!-- Vendor CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link href="vendors/animate-css/animate.min.css" rel="stylesheet">
+        <link href="vendors/fullcalendar/fullcalendar.css" rel="stylesheet">
+            
+        <!-- CSS -->
+        <link rel="stylesheet" href="css/select2.min.css">
+        <link href="css/app.min.css" rel="stylesheet">
+        <!--<link href="css/style.css" rel="stylesheet">-->
+        <link href="css/notify.css" rel="stylesheet">
+        <link href="css/schedule.css" rel="stylesheet">
+        <link href="css/default/style.css" rel="stylesheet">
+    </head>
+    
+    <body data-mode="view-mode" data-view="basicWeek">
+        <header id="header">
+            <ul class="header-inner">
+                <li class="pull-left"><a href="" class="Unibook-logo"><img src="img/unibook-logo.svg" alt=""></a></li>
+                <!--<li class="pull-left"><a href="" class="Unibook-slogan">Cədvəl</a></li>-->
+                <li class="pull-right">
+                    <a href="" class="user"><img src="img/guest.png" alt=""></a>
+                </li>
+                <li class="pull-right">
+                    <ul class="top-menu">
+                        <li id="toggle-width">
+                            <div class="toggle-switch">
+                                <input id="tw-switch" type="checkbox" hidden="hidden">
+                                <label for="tw-switch" class="ts-helper"></label>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+                <li class="pull-right">
+                    <div class="hide-menu less-menu">
+                        <i class="glyphicon glyphicon-menu-hamburger"></i>
+                    </div>
+                    <div class="app-list less-menu">
+                        <ul class="app-con"></ul>
+                    </div>
+                </li>
+
+            </ul>
+            
+            <!-- Top Search Content -->
+            <div id="top-search-wrap">
+                <input type="text">
+                <i id="top-search-close">&times;</i>
+            </div>
+        </header>
+        
+        <section id="main">
+            <aside id="sidebar">
+                <div class="sidebar-inner">
+
+                    <div class="first-view view-block">
+                        <div class="filters">
+                            <form id="course-filter-form-view">
+                            <input type="hidden" name="orgId" id="orgId">
+                            <div class="btn-group org-button">
+                                <div permanent-address class="tree-modal-container">
+                                    <button  id="org-list" type="button" class="btn btn-primary group-tree-modal  btn-block"><span data-i18n="structure">Structure</span></button>
+
+                                </div>
+                            </div>
+                                <div class="form-group">
+                                    <label for="study-type-view">Təhsil tipi</label>
+                                    <div class="fg-line select">
+                                        <select name="eduTypeId" id="study-type-view" class="form-control mdb-select">
+                                          
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="study-lang-view">Tədris dili</label>
+                                    <div class="fg-line select">
+                                        <select name="eduLangId" id="study-lang-view" class="form-control mdb-select">
+                               
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="study-semestr-view">Semestr</label>
+                                    <div class="fg-line select">
+                                        <select name="semestrId" id="study-semestr-view" class="form-control mdb-select">
+                                    
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="courses-view">Fənn qrupu</label>
+                                    <div class="fg-line select">
+                                        <select name="courseId" id="courses-view" class="form-control mdb-select select-search">
+                                    
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="schedule_type">Cədvəl növü</label>
+                                    <div class="fg-line select">
+                                        <select name="schedule_type" id="schedule_type" class="form-control mdb-select">
+                                            <option selected>Dərs cədvəli</option>
+                                            <option disabled>İmtahan cədvəli</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </form>    
+                        </div>  
+                        <div class="text-center"><button class="btn btn-primary" id="refresh">Yenilə</button></div>  
+                    </div>
+                    <div class="second-view view-block">
+                        <div class="view-scope">
+                            <form id="course-filter-form">
+                                <input type="hidden" name="orgId" id="orgId">
+                                <div class="btn-group org-button">
+                                    <div permanent-address class="tree-modal-container">
+                                        <button  id="org-list" type="button" class="btn btn-primary group-tree-modal  btn-block"><span data-i18n="structure">Structure</span></button>
+
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="fg-line select">
+                                        <select name="eduTypeId" id="study-type" class="form-control mdb-select">
+                           
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="fg-line select">
+                                        <select name="eduLangId" id="study-lang" class="form-control mdb-select">
+                                         
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="fg-line select">
+                                        <select name="semestrId" id="study-semestr" class="form-control mdb-select">
+                                        
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="code">Kod</label>
+                                    <div class="fg-line">
+                                        <input type="text" class="input-sm form-control" id="code" name="code">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="fg-line select">
+                                        <select name="courses" id="courses" class="form-control mdb-select">
+                                  
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="schedule_type2">Cədvəl növü</label>
+                                    <div class="fg-line select">
+                                        <select name="schedule_type" id="schedule_type2" class="form-control mdb-select">
+                                            <option selected>Dərs cədvəli</option>
+                                            <option disabled>İmtahan cədvəli</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </form>
+
+                            <div class="removeCopyButton text-center">
+                                <button class="btn btn-danger"></button>
+                            </div>
+                            <ul id="eventsToAdd">
+                            </ul>
+                            <div class="text-center"><button id="schedule_submit" class="btn btn-success">Təstiq</button></div>
+                        </div>
+                        <div class="text-center"><button class="btn btn-primary" id="back">Geri</button></div>   
+                    </div>
+                </div>
+            </aside>
+            <section id="content">
+                <div class="container-fluid">
+
+                    <!--<div class="overlay"></div>-->
+                    <button class="btn btn-warning waves-effect copy-events hidden" data-i18n="copy"></button>
+                    <div id="calendar"></div>
+                    
+                    <!-- Add event -->
+                    <div class="modal fade" id="addNew-event" data-backdrop="static" data-keyboard="false">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h4 class="modal-title">Əlavə et</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <form class="addEvent" role="form">
+<!--                                         <div class="form-group">
+                                            <label for="eventName">Ad</label>
+                                            <div class="fg-line">
+                                                <input type="text" class="input-sm form-control" id="eventName" >
+                                            </div>
+                                        </div> -->
+
+                                        <div class="form-group">
+                                            <label for="clock">Vaxt</label>
+                                            <div class="fg-line select">
+                                                <select name="" id="clock" class="form-control mdb-select" data-required-field>
+                                               
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="rooms">Otaq</label>
+                                            <div class="fg-line select">
+                                                <select name="" id="rooms" class="form-control mdb-select" data-required-field>
+                                                   
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="teachers">Müəllim</label>
+                                            <div class="fg-line select">
+                                                <select name="" id="teachers" class="form-control mdb-select" data-required-field>
+                                                  
+                                                </select>
+                                            </div>
+                                        </div>
+                                        
+
+                                        
+                                        <input type="hidden" id="getStart" />
+                                        <input type="hidden" id="getEnd" />
+                                    </form>
+                                </div>
+                                
+                                <div class="modal-footer">
+                                    <button type="submit" class="btn btn-link" id="addEvent">Yadda saxla</button>
+                                    <button type="button" class="btn btn-link" data-dismiss="modal" id="close">Bağla</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+        </section>
+
+        <div id="structureTree" class="modal">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header header-primary">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                <h4 data-i18n="university" class="modal-title">Ali təhsil müəssisəsi</h4>
+                            </div>
+                            <div class="modal-body scrollable">
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <div class="search-bar">
+                                            <div class="prepend-icon">
+                                                <input data-i18n="placeholder.search" class="form-control input-sm tree-search" type="search" placeholder="Search">
+                                                <i class="fa fa-search"></i>
+                                            </div>
+                                        </div>
+                                        <div id="org-list-tree" style="overflow: auto;">
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer flex-img">
+                                <button data-i18n="ok" type="button" class="btn btn-primary orgStructureFilter">OK</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+    
+        <!-- Javascript Libraries -->
+        <script src="js/jquery-2.1.1.min.js"></script>
+        <script src="js/jquery-ui.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        
+        <script src="js/jstree.js"></script>
+        <script src="js/notify.min.js"></script>
+        <script src="js/notify.js"></script>
+        <script src="vendors/nicescroll/jquery.nicescroll.min.js"></script>
+        <script src="vendors/fullcalendar/lib/moment.min.js"></script>
+        <script src="js/moment-with-locales.js"></script>
+        <script src="vendors/fullcalendar/fullcalendar.min.js"></script>
+        <script src="vendors/waves/waves.min.js"></script>
+        <script src="vendors/bootstrap-growl/bootstrap-growl.min.js"></script>
+        <script src="vendors/sweet-alert/sweet-alert.min.js"></script>
+        <script src="js/select2.min.js"></script>
+        <script src="js/functions.js"></script>
+        <script src="js/schedule.js"></script>
+        <script src="js/events.js"></script>
+                <script>
+                    $(function () {
+                        Schedule.i18n(Schedule.lang);
+                        
+                        // $('#structureTree .modal-content').draggable({
+                        //     cancel: '.scrollable'
+                        // });
+                        
+                        $('body').on('click', '#org-list', function (event) {
+                            try {
+                                $('#structureTree').modal({
+                                    backdrop: false
+                                });
+
+                                var treeObj = $(':jstree').length;
+                //                if (treeObj == 0) {
+        //                            if ($('#org-list-tree').attr('check') !== '1') {
+                                        Schedule.Loads.loadOrgTreeByType(1000700, function (tree) {
+                                            Schedule.Parsers.commonParseTree(tree, 'org-list-tree');
+                                            $('.tree-preloader').remove();
+                                        }, $('#org-list-tree'));
+                                        var searchString = $('body .tree-search').val();
+                                        $('#org-list-tree').jstree('search', searchString);
+        //                            }
+                //                }
+                                ;
+
+                            }
+                            catch (err) {
+                                console.error(err);
+                            }
+                        });
+                        
+                        $(".tree-search").keyup(function () {
+                            var searchString = $(this).val();
+                            $('#org-list-tree').jstree('search', searchString);
+                        });
+
+                        $('body').find('.select-search').select2();
+
+
+                        $('.orgStructureFilter').on('click', function (e) {
+                            try {
+                                var id = $('#org-list-tree li[aria-selected="true"]').attr('id');
+                                var text = $('#org-list-tree li[aria-selected="true"]').find('a:first').text();
+                                if (text.length > 0) {
+                                    $('.btn.group-tree-modal').text(text);
+                                    $('.btn.group-tree-modal').attr('data-id', id);
+                                    $('#structureTree').modal('hide');
+
+                                    if (id !== 0) {
+                                       $('input[name="orgId"]').val(id);
+                                       Schedule.Loads.loadEvents();
+                                       var params = $('#course-filter-form-view').serialize();
+
+                                       Schedule.Loads.loadFilterCourses(params);
+                                    }
+                                    else {
+                                       // $('input[name="orgId"]').val('');
+                                    }
+
+        //                            var params = $('.content-body .technical-search-form').serialize();
+        //                            Hsis.Proxy.getTechnicalBaseList('',params);
+                                }
+                                else {
+                                    $.notify(Hsis.dictionary[Hsis.lang]['select_information'], {
+                                        type: 'warning'
+                                    })
+                                }
+                            }
+                            catch (err) {
+
+                            }
+                        });
+                        
+        //                Schedule.Loads.loadOrgTreeByType(1000700, function (tree) {
+        //                    Schedule.Parsers.commonParseTree(tree, 'org-list-accordion');
+        //                }, $('#org-list-accordion'));
+                        
+        //                $("body #org-list-accordion").on("select_node.jstree", function (evt, data) {
+        //                    try {
+        //                        var path = data.instance.get_path(data.node, ',');
+        //                        $('#headingOne').attr('data-node-id', data.node.id);
+        //                        $('#headingOne').attr('data-node-text', path);
+        //                        $('#university-list-h6').text(path);
+        ////                        $('body .structure-id').val(data.node.id);
+        ////                        $('body .structure-type-id').val(data.node.original.typeId);
+        //                    }
+        //                    catch (err) {
+        //                        console.error(err);
+        //                    }
+        //                });
+                    })
+                </script>
+
+    </body>
+
+</html>
