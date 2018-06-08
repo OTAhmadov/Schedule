@@ -4,7 +4,7 @@ var GlobalmeetingEndDate ;
 var curEv=[];
 var submitedEvents = [];
 var Schedule = {
-    // token: 'fa5df1dab9734b52b88f986e5dfad327010d2868c20e4954a6aaa782bdf908d9',
+    // token: '2d60cc07d3494e329176d75357d636cc3f8214d810614f148640ab101e78ede2',
     lang: 'az',
     appId: 1000009,
     currModule: '',
@@ -173,7 +173,7 @@ var Schedule = {
                     $('[data-toggle="tooltip"]').tooltip();
 
                     var moduleListItems = $('body').find('.app-con li');
-                    console.log(moduleListItems)
+                    // console.log(moduleListItems)
                     if(moduleListItems.length>5){
                         $('body').find('div.app-list, .hide-menu').addClass('less-menu')
                     }else{

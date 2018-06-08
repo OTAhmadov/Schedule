@@ -1533,9 +1533,9 @@ mark, .mark {
     text-align: right !important;
 }
 
-.text-center {
-    text-align: center
-}
+/*.text-center {*/
+    /*text-align: center*/
+/*}*/
 
 .text-justify {
     text-align: justify
@@ -12528,7 +12528,7 @@ a.waves-effect .waves-ripple {
 
 body {
     font-weight: 400;
-    padding-top: 65px
+    padding-top: 50px
 }
 
 audio, video {
@@ -12579,7 +12579,7 @@ body #content {
 
 @media (min-width: 1200px) {
     body.sw-toggled #content {
-        padding: 30px 0 30px 100px
+        /*padding: 30px 0 30px 100px*/
     }
 }
 
@@ -12593,7 +12593,7 @@ body #content {
 #header {
     background: #4285F4;
     box-shadow: 0 1px 4px rgba(0, 0, 0, .3);
-    height: 55px;
+    height: 40px;
     position: fixed;
     z-index: 10;
     width: 100%;
@@ -13074,15 +13074,15 @@ body #content {
     position: fixed;
     background: #fff;
     box-shadow: 0 0 10px rgba(51, 51, 51, .38);
-    top: 65px;
+    top: 50px;
     height: calc(100% - 65px);
     -webkit-transform: translate3d(-250px, 0, 0);
     transform: translate3d(-250px, 0, 0);
     z-index: 5;
     width: 250px;
-    /*overflow-x: hidden;*/
+    overflow-x: hidden;
     opacity: 0;
-    filter: alpha(opacity=0)
+    filter: alpha(opacity=0);
 }
 
 #sidebar .sidebar-inner {
@@ -19277,10 +19277,10 @@ div.fc-row {
         padding: 0 0;
     }
     body.sw-toggled #content {
-        /*width: calc(100% - 150px);*/
-        /*float: right;*/
+        width: calc(100% - 0);
+        float: right;
         padding-left: 250px;
-        padding-top: 15px;
+        /*padding-top: 15px;*/
         
     }
     .top-menu #toggle-width .toggle-switch{
@@ -19381,17 +19381,18 @@ a.fc-event{
 }
 .app-list{
     overflow: hidden;
-    height: 55px;
-    margin-top: -5px;
+    height: 40px;
+    margin-top: -12px;
 }
 .app-list ul li{
     float: left;
     margin: 0;
-    padding: 0 15px;
+    /*padding: 0 15px;*/
     list-style: none;
     width: 120px;
     text-align: center;
-    line-height: 46px;
+    line-height: 40px;
+    height: 40px;
 }
 .app-list ul li a{
      font-size: 12px;
@@ -19446,7 +19447,7 @@ body.sw-toggled .overlay{
     margin-left: 250px;
 }
 .top-menu #toggle-width .toggle-switch {
-    margin: 8px 30px 0 0
+    margin: 0px 30px 0 0
 }
 
 .top-menu #toggle-width .toggle-switch .ts-helper {
@@ -19476,7 +19477,7 @@ body.sw-toggled .overlay{
 
 .Unibook-logo{
     position: relative;
-    top: 3px;
+    top: -1px;
 }
 .Unibook-logo:before{
     content: '';
@@ -19617,7 +19618,7 @@ body.sw-toggled .overlay{
     padding-left: 0;
 }
 a.user{
-    margin-top: 1px;
+    margin-top: -7px;
 }
 .app-list{
     display: block;
@@ -19772,7 +19773,7 @@ li.ems-tab.active>a,li.ems-tab.active>a:hover, li.ems-tab.active>a:focus{
     position: absolute;
     right: -500px;
     height: 100vh;
-    top: 55px;
+    top: 40px;
     z-index: 999 !important;
     background-color: white;
     transition: ease-in-out 500ms;
@@ -19792,8 +19793,9 @@ li.ems-tab.active>a,li.ems-tab.active>a:hover, li.ems-tab.active>a:focus{
     height: 80px;
     overflow: hidden;
     /*border-radius: 50%;*/
-    border: 1px solid grey;
+    /*border: 1px solid grey;*/
     position: absolute;
+    border-radius: 4px !important;
     top: 30px;
     left: 20px;
 }
@@ -19801,3 +19803,23 @@ li.ems-tab.active>a,li.ems-tab.active>a:hover, li.ems-tab.active>a:focus{
     height: 80px;
     width: 80px;
 }
+
+/*.schedule-filter:first-child{*/
+    /*margin-left: 0;*/
+/*}*/
+
+/*.schedule-filter{*/
+    /*float: left ;*/
+    /*width: calc(95% / 5);*/
+    /*margin-left: 4px ;*/
+/*}*/
+/*.schedule-filter:nth-of-type(5){*/
+    /*margin-top: 7px;*/
+/*}*/
+/*.addMargin{*/
+    /*margin-top: -140px;*/
+    /*transition: ease-in-out 500ms;*/
+/*}*/
+/*.schedule-filter:last-child{*/
+    /*width: calc(22% - 60px);*/
+/*}*/

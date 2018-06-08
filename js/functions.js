@@ -8,7 +8,6 @@
        $('body').addClass('sw-toggled');
        $('#tw-switch').prop('checked', true);
    }
-   
    $('body').on('change', '#toggle-width input:checkbox', function(){
        if ($(this).is(':checked')) {
 	   $('body').addClass('toggled sw-toggled');
@@ -16,7 +15,7 @@
        }
        else {
 	   $('body').removeClass('toggled sw-toggled');
-	   localStorage.setItem('ma-layout-status', 0);
+           localStorage.setItem('ma-layout-status', 0);
        }
    });
 })();
