@@ -12593,7 +12593,7 @@ body #content {
 #header {
     background: #4285F4;
     box-shadow: 0 1px 4px rgba(0, 0, 0, .3);
-    height: 40px;
+    height: 50px;
     position: fixed;
     z-index: 10;
     width: 100%;
@@ -19391,8 +19391,8 @@ a.fc-event{
     list-style: none;
     width: 120px;
     text-align: center;
-    line-height: 40px;
-    height: 40px;
+    line-height: 50px;
+    height: 50px;
 }
 .app-list ul li a{
      font-size: 12px;
@@ -19447,7 +19447,7 @@ body.sw-toggled .overlay{
     margin-left: 250px;
 }
 .top-menu #toggle-width .toggle-switch {
-    margin: 0px 30px 0 0
+    margin: 6px 12px 0 0
 }
 
 .top-menu #toggle-width .toggle-switch .ts-helper {
@@ -19477,18 +19477,18 @@ body.sw-toggled .overlay{
 
 .Unibook-logo{
     position: relative;
-    top: -1px;
+    top: 4px;
 }
-.Unibook-logo:before{
-    content: '';
-    display: block;
-    position: absolute;
-    top: -6px;
-    right: -10px;
-    width: 1px;
-    height: 30px;
-    background: #fff;
-}
+/*.Unibook-logo:before{*/
+    /*content: '';*/
+    /*display: block;*/
+    /*position: absolute;*/
+    /*top: -6px;*/
+    /*right: -10px;*/
+    /*width: 1px;*/
+    /*height: 30px;*/
+    /*background: #fff;*/
+/*}*/
 .org-button{
     width: 100%;
 }
@@ -19528,7 +19528,7 @@ body.sw-toggled .overlay{
     display: none;
     float: right;
     width: 34px;
-    margin-top: 8px;
+    margin-top: 5px;
 }
 .hide-menu i{
     color: #fff;
@@ -19618,7 +19618,7 @@ body.sw-toggled .overlay{
     padding-left: 0;
 }
 a.user{
-    margin-top: -7px;
+    margin-top: -2px;
 }
 .app-list{
     display: block;
@@ -19701,6 +19701,7 @@ a.user{
     padding: 15px 30px !important;
     font-size: 15px;
     font-weight: 300;
+    height: 50px;
     text-transform: uppercase;
     text-align: center;
     border-radius: 0 !important;
@@ -19773,7 +19774,7 @@ li.ems-tab.active>a,li.ems-tab.active>a:hover, li.ems-tab.active>a:focus{
     position: absolute;
     right: -500px;
     height: 100vh;
-    top: 40px;
+    top: 50px;
     z-index: 999 !important;
     background-color: white;
     transition: ease-in-out 500ms;

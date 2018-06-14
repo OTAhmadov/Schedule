@@ -4,7 +4,7 @@ var GlobalmeetingEndDate ;
 var curEv=[];
 var submitedEvents = [];
 var Schedule = {
-    // token: '2d60cc07d3494e329176d75357d636cc3f8214d810614f148640ab101e78ede2',
+    token: '45ea60fbd0fc49cd9ebee781d0c6f551883571092a434530b6721f2607375c51',
     lang: 'az',
     appId: 1000009,
     currModule: '',
